@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Const, User, UserStoreService } from '../../../shared';
-import { AuthenticationService } from '../../service';
+import { AuthService } from '../../service';
 import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
@@ -19,7 +19,7 @@ export class SignUpComponent implements OnInit {
     constructor(private fb: FormBuilder,
                 private router: Router,
                 private message: NzMessageService,
-                private authenticationService: AuthenticationService,
+                private authService: AuthService,
                 private userStoreService: UserStoreService) {
     }
 
@@ -43,7 +43,7 @@ export class SignUpComponent implements OnInit {
             }
         }
 
-        this.authenticationService.signUp(this.getUserFromForm())
+        this.authService.signUp(this.getUserFromForm())
             .subscribe(next => {
                 this.userStoreService.setAuthUser(next);
                 this.router.navigate(['auth', 'addInfo']);

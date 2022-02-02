@@ -14,11 +14,11 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AddInfoComponent, AuthenticationComponent, SignInComponent, SignUpComponent } from './component';
+import { AddInfoComponent, AuthComponent, SignInComponent, SignUpComponent } from './component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [SignInComponent, SignUpComponent, AuthenticationComponent, AddInfoComponent],
+    declarations: [SignInComponent, SignUpComponent, AuthComponent, AddInfoComponent],
     imports: [
         CommonModule,
         NzFormModule,
@@ -44,5 +44,5 @@ import { RouterModule } from '@angular/router';
         SignUpComponent
     ]
 })
-export class AuthenticationModule {
+export class AuthModule {
 }

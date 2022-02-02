@@ -5,13 +5,13 @@ import { SearchResultListComponent } from './search';
 import { UserListComponent, UserProfileComponent } from './user';
 import { HomeComponent } from './home';
 import { TweetZoneComponent } from './tweet';
-import { AddInfoComponent, AuthenticationComponent, SignInComponent, SignUpComponent } from './authentication';
+import { AddInfoComponent, AuthComponent, SignInComponent, SignUpComponent } from './auth';
 
 
 const routes: Routes = [
     {
         path: 'auth',
-        component: AuthenticationComponent,
+        component: AuthComponent,
         children: [
             {
                 path: '',

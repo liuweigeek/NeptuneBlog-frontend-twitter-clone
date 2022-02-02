@@ -16,7 +16,7 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
 import { AuthInterceptor } from './shared';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home';
-import { AuthenticationModule } from './authentication';
+import { AuthModule } from './auth';
 
 registerLocaleData(zh);
 
@@ -34,7 +34,7 @@ registerLocaleData(zh);
         BrowserAnimationsModule,
         NzMessageModule,
         HomeModule,
-        AuthenticationModule
+        AuthModule
     ],
     providers: [
         {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

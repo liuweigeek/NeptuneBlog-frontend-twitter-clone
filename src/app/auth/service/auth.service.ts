@@ -8,7 +8,7 @@ import { timeout } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
-export class AuthenticationService {
+export class AuthService {
 
     constructor(private http: HttpClient) {
     }
