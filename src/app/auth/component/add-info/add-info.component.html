@@ -16,9 +16,13 @@
             </nz-upload>
         </nz-form-control>
     </nz-form-item>
-    <nz-form-item nz-row class="add-info-area">
+    <nz-form-item nz-row>
         <nz-form-control [nzSpan]="16" [nzOffset]="10">
             <button type="button" (click)="navigateToMainPage()" nz-button nzType="default">以后再说</button>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row>
+        <nz-form-control [nzSpan]="16" [nzOffset]="10">
             <button type="submit" [nzLoading]="uploading" nz-button nzType="primary">保存设置</button>
         </nz-form-control>
     </nz-form-item>
